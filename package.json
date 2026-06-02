@@ -1,0 +1,19 @@
+{
+  "name": "listedbase-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "nx run-many -t build",
+    "typecheck": "nx run-many -t typecheck",
+    "lint": "nx run-many -t lint"
+  },
+  "devDependencies": {
+    "nx": "latest",
+    "@nx/js": "latest",
+    "@nx/eslint-plugin": "latest",
+    "typescript": "^6.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "latest",
+    "@eslint/js": "latest",
+    "typescript-eslint": "latest"
+  }
+}

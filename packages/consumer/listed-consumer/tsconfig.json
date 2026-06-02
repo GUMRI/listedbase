@@ -1,0 +1,12 @@
+{
+  "extends": "../../../tsconfig.isomorphic.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../../core/listedbase" },
+    { "path": "../../drivers/listed-driver" }
+  ]
+}

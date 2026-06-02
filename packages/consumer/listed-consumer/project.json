@@ -1,0 +1,10 @@
+{
+  "name": "listed-consumer",
+  "projectType": "library",
+  "tags": ["platform:isomorphic", "scope:consumer"],
+  "targets": {
+    "build": { "executor": "nx:run-commands", "options": { "command": "tsc -p packages/consumer/listed-consumer/tsconfig.json" } },
+    "typecheck": { "executor": "nx:run-commands", "options": { "command": "tsc -p packages/consumer/listed-consumer/tsconfig.json --noEmit" } },
+    "lint": { "executor": "@nx/eslint:lint" }
+  }
+}

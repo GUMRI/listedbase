@@ -1,0 +1,10 @@
+{
+  "name": "listed-driver",
+  "projectType": "library",
+  "tags": ["platform:isomorphic", "scope:driver"],
+  "targets": {
+    "build": { "executor": "nx:run-commands", "options": { "command": "tsc -p packages/drivers/listed-driver/tsconfig.json" } },
+    "typecheck": { "executor": "nx:run-commands", "options": { "command": "tsc -p packages/drivers/listed-driver/tsconfig.json --noEmit" } },
+    "lint": { "executor": "@nx/eslint:lint" }
+  }
+}

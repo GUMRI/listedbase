@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/core/listedbase" },
+    { "path": "./packages/drivers/listed-driver" },
+    { "path": "./packages/drivers/listed-idb" },
+    { "path": "./packages/drivers/listed-firestore" },
+    { "path": "./packages/drivers/listed-sqlite" },
+    { "path": "./packages/consumer/listed-consumer" },
+    { "path": "./packages/consumer/listed-angular" },
+    { "path": "./packages/consumer/listed-react" },
+    { "path": "./packages/consumer/listed-express" }
+  ]
+}
