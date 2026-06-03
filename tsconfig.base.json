@@ -14,6 +14,17 @@
     "sourceMap": true,
     "incremental": true,
     "verbatimModuleSyntax": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "paths": {
+      "listedbase": ["./packages/core/core/src/index.ts"],
+      "listed-driver": ["./packages/drivers/driver/src/index.ts"],
+      "listed-idb": ["./packages/drivers/idb/src/index.ts"],
+      "listed-firestore": ["./packages/drivers/firestore/src/index.ts"],
+      "listed-sqlite": ["./packages/drivers/sqlite/src/index.ts"],
+      "listed-consumer": ["./packages/consumer/consumer/src/index.ts"],
+      "listed-angular": ["./packages/consumer/angular/src/index.ts"],
+      "listed-react": ["./packages/consumer/react/src/index.ts"],
+      "listed-express": ["./packages/consumer/express/src/index.ts"]
+    }
   }
 }

@@ -5,8 +5,5 @@
     "rootDir": "./src"
   },
   "include": ["src/**/*"],
-  "references": [
-    { "path": "../consumer" },
-    { "path": "../../drivers/driver" }
-  ]
+  "references": [{"path": "../consumer"}, {"path": "../../drivers/driver"}]
 }
