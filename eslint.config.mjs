@@ -1,12 +1,13 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
+import nxPlugin from "@nx/eslint-plugin";
 
 export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
     plugins: {
-      "@nx": (await import("@nx/eslint-plugin")).default,
+      "@nx": nxPlugin,
     },
     rules: {
       "@nx/enforce-module-boundaries": [

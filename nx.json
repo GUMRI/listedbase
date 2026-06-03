@@ -8,11 +8,10 @@
     },
     "typecheck": {
       "cache": true,
-      "inputs": ["default", "^default"]
+      "dependsOn": ["^typecheck"]
     },
     "lint": {
-      "cache": true,
-      "inputs": ["default", "^default"]
+      "cache": true
     }
   },
   "namedInputs": {

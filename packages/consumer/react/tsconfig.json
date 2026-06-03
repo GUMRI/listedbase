@@ -1,0 +1,12 @@
+{
+  "extends": "../../../tsconfig.browser.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../consumer" },
+    { "path": "../../drivers/driver" }
+  ]
+}

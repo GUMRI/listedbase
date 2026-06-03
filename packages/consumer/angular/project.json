@@ -1,0 +1,10 @@
+{
+  "name": "listed-angular",
+  "projectType": "library",
+  "tags": ["platform:browser", "scope:consumer"],
+  "targets": {
+    "build": { "executor": "nx:run-commands", "options": { "command": "tsc -p packages/consumer/angular/tsconfig.json" } },
+    "typecheck": { "executor": "nx:run-commands", "options": { "command": "tsc -p packages/consumer/angular/tsconfig.json --noEmit" } },
+    "lint": { "executor": "@nx/eslint:lint" }
+  }
+}
