@@ -1,0 +1,20 @@
+{
+  "name": "consumers-angular",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/consumers/angular/src",
+  "tags": ["scope:consumer", "env:browser", "framework:angular"],
+  "implicitDependencies": ["consumers-abstract"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/consumers/angular",
+        "main": "packages/consumers/angular/src/index.ts",
+        "tsConfig": "packages/consumers/angular/tsconfig.lib.json",
+        "assets": ["packages/consumers/angular/*.md"]
+      }
+    }
+  }
+}

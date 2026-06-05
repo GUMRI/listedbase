@@ -1,0 +1,20 @@
+{
+  "name": "consumers-express",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/consumers/express/src",
+  "tags": ["scope:consumer", "env:node"],
+  "implicitDependencies": ["consumers-abstract"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/consumers/express",
+        "main": "packages/consumers/express/src/index.ts",
+        "tsConfig": "packages/consumers/express/tsconfig.lib.json",
+        "assets": ["packages/consumers/express/*.md"]
+      }
+    }
+  }
+}

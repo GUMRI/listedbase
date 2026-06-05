@@ -1,0 +1,19 @@
+{
+  "name": "consumers-abstract",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/consumers/abstract/src",
+  "tags": ["scope:consumer", "env:universal"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/consumers/abstract",
+        "main": "packages/consumers/abstract/src/index.ts",
+        "tsConfig": "packages/consumers/abstract/tsconfig.lib.json",
+        "assets": ["packages/consumers/abstract/*.md"]
+      }
+    }
+  }
+}

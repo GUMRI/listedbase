@@ -1,18 +1,20 @@
 {
-  "name": "listed-sqlite",
+  "name": "drivers-sqlite",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "tags": ["platform:node", "scope:driver"],
+  "sourceRoot": "packages/drivers/sqlite/src",
+  "tags": ["scope:driver", "env:node"],
+  "implicitDependencies": ["drivers-abstract"],
   "targets": {
     "build": {
-      "executor": "nx:run-commands",
-      "options": { "command": "tsc -p packages/drivers/sqlite/tsconfig.json" }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": { "command": "tsc -p packages/drivers/sqlite/tsconfig.json --noEmit" }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/drivers/sqlite",
+        "main": "packages/drivers/sqlite/src/index.ts",
+        "tsConfig": "packages/drivers/sqlite/tsconfig.lib.json",
+        "assets": ["packages/drivers/sqlite/*.md"]
+      }
     }
   }
 }

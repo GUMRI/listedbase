@@ -1,18 +1,20 @@
 {
-  "name": "listed-firestore",
+  "name": "drivers-firestore",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "tags": ["platform:browser", "scope:driver"],
+  "sourceRoot": "packages/drivers/firestore/src",
+  "tags": ["scope:driver", "env:browser"],
+  "implicitDependencies": ["drivers-abstract"],
   "targets": {
     "build": {
-      "executor": "nx:run-commands",
-      "options": { "command": "tsc -p packages/drivers/firestore/tsconfig.json" }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": { "command": "tsc -p packages/drivers/firestore/tsconfig.json --noEmit" }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/drivers/firestore",
+        "main": "packages/drivers/firestore/src/index.ts",
+        "tsConfig": "packages/drivers/firestore/tsconfig.lib.json",
+        "assets": ["packages/drivers/firestore/*.md"]
+      }
     }
   }
 }
