@@ -1,14 +1,14 @@
 {
   "files": [],
   "references": [
-    { "path": "./packages/core/core" },
-    { "path": "./packages/drivers/driver" },
+    { "path": "./packages/core" },
+    { "path": "./packages/consumers/abstract" },
+    { "path": "./packages/consumers/angular" },
+    { "path": "./packages/consumers/react" },
+    { "path": "./packages/consumers/express" },
+    { "path": "./packages/drivers/abstract" },
     { "path": "./packages/drivers/idb" },
     { "path": "./packages/drivers/firestore" },
-    { "path": "./packages/drivers/sqlite" },
-    { "path": "./packages/consumer/consumer" },
-    { "path": "./packages/consumer/angular" },
-    { "path": "./packages/consumer/react" },
-    { "path": "./packages/consumer/express" }
+    { "path": "./packages/drivers/sqlite" }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "name": "consumers-react",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/consumers/react/src",
+  "tags": ["scope:consumer", "env:browser", "framework:react"],
+  "implicitDependencies": ["consumers-abstract"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/consumers/react",
+        "main": "packages/consumers/react/src/index.ts",
+        "tsConfig": "packages/consumers/react/tsconfig.lib.json",
+        "assets": ["packages/consumers/react/*.md"]
+      }
+    }
+  }
+}

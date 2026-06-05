@@ -1,0 +1,19 @@
+{
+  "name": "drivers-abstract",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/drivers/abstract/src",
+  "tags": ["scope:driver", "env:universal"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/drivers/abstract",
+        "main": "packages/drivers/abstract/src/index.ts",
+        "tsConfig": "packages/drivers/abstract/tsconfig.lib.json",
+        "assets": ["packages/drivers/abstract/*.md"]
+      }
+    }
+  }
+}

@@ -13,20 +13,28 @@ export default tseslint.config(
       "@nx/enforce-module-boundaries": [
         "error",
         {
-          enforceBuildableLibDependency: true,
-          allow: [],
-          depConstraints: [
+          "enforceBuildableLibDependency": true,
+          "allow": [],
+          "depConstraints": [
             {
-              sourceTag: "platform:isomorphic",
-              onlyDependOnLibsWithTags: ["platform:isomorphic"]
+              "sourceTag": "env:browser",
+              "onlyDependOnLibsWithTags": ["env:browser", "env:universal"]
             },
             {
-              sourceTag: "platform:browser",
-              onlyDependOnLibsWithTags: ["platform:isomorphic", "platform:browser"]
+              "sourceTag": "env:node",
+              "onlyDependOnLibsWithTags": ["env:node", "env:universal"]
             },
             {
-              sourceTag: "platform:node",
-              onlyDependOnLibsWithTags: ["platform:isomorphic", "platform:node"]
+              "sourceTag": "env:universal",
+              "onlyDependOnLibsWithTags": ["env:universal"]
+            },
+            {
+              "sourceTag": "scope:driver",
+              "onlyDependOnLibsWithTags": ["scope:driver"]
+            },
+            {
+              "sourceTag": "scope:consumer",
+              "onlyDependOnLibsWithTags": ["scope:consumer", "scope:driver"]
             }
           ]
         }
